@@ -21,6 +21,14 @@ DeepSeek Harness 桌面宠物，**基于 [dsh-pet](https://github.com/PC2005-clo
 
 ## 安装
 
+从 GitHub 直接装（**不需要 npm**，推荐）：
+
+```bash
+dsh plugin add github:lintwosix-beep/dsh-pet-chat
+```
+
+如果之后也发到了 npm，可以用短名字：
+
 ```bash
 dsh plugin add dsh-pet-chat
 ```
