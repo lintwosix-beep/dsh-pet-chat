@@ -1,0 +1,107 @@
+{
+  "name": "dsh-pet-chat",
+  "version": "0.3.9",
+  "description": "桌宠「宠物聊天」：基于 dsh-pet 的二次修改版——QQ 风格对话面板（对话记录/收藏/分支）、合并转发卡片、面板停靠与八向缩放、本地寒暄省 token。",
+  "icon": "assets/logo.png",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "desktop-pet",
+    "pet",
+    "chat",
+    "panel",
+    "cordis"
+  ],
+  "homepage": "https://github.com/lintwosix-beep/dsh-pet-chat#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lintwosix-beep/dsh-pet-chat.git"
+  },
+  "bugs": {
+    "url": "https://github.com/lintwosix-beep/dsh-pet-chat/issues"
+  },
+  "type": "module",
+  "main": "lib/index.js",
+  "bin": {
+    "dsh-pet-standalone": "lib/standalone.js"
+  },
+  "exports": {
+    ".": {
+      "types": "./lib/types/index.d.ts",
+      "default": "./lib/index.js"
+    },
+    "./client": {
+      "types": "./lib/types/client/index.d.ts",
+      "default": "./lib/client.js"
+    },
+    "./src/*": "./src/*",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "src",
+    "assets/webm",
+    "runtime/electron-helper",
+    "assets/fonts",
+    "assets/pic",
+    "assets/memes",
+    "assets/config.jsonc",
+    "assets/logo.png",
+    "scripts/ensure-electron.mjs",
+    "docs",
+    "cordis.patch.yml"
+  ],
+  "license": "MIT",
+  "author": "PC2005-cloud（原项目 dsh-pet）",
+  "contributors": [
+    {
+      "name": "dsh-pet-chat 修改者"
+    }
+  ],
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "0.135.0",
+    "@electron-internal/extract-zip": "^1.0.5",
+    "@electron/get": "^5.1.0",
+    "openai": "7.39.0",
+    "zod": "4.6.7"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "^4.0.4",
+    "@deepseek-ai/dsh-agent-default-model": "^0.2.0-rc.1",
+    "@deepseek-ai/dsh-client-connection": "^0.2.0-rc.1",
+    "@deepseek-ai/dsh-client-ui-primitives": "^0.2.0-rc.1",
+    "@deepseek-ai/dsh-client-ui-slots": "^0.2.0-rc.1",
+    "@deepseek-ai/dsh-commands": "^0.2.0-rc.1",
+    "@deepseek-ai/dsh-credentials": "^0.2.0-rc.1",
+    "@deepseek-ai/dsh-home-paths": "^0.2.0-rc.1",
+    "@deepseek-ai/dsh-host-webserver": "^0.2.0-rc.1",
+    "@deepseek-ai/dsh-llm": "^0.2.0-rc.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "scripts": {},
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "compatibility": {
+      "dshReleases": {
+        "0.1.7-rc.2": "incompatible",
+        "0.2.0-rc.1": "compatible",
+        "0.2.0-rc.2": "compatible",
+        "0.2.1-rc.2": "compatible"
+      }
+    },
+    "client": {
+      "inject": [
+        "@deepseek-ai/dsh-client-connection"
+      ],
+      "platform": "web"
+    }
+  }
+}
