@@ -10,6 +10,13 @@ DeepSeek Harness 桌面宠物，**基于 [dsh-pet](https://github.com/PC2005-clo
 - **面板停靠 + 八向缩放**：面板固定在小女仆右侧不挡她；边缘/四角拖拽改大小，设置里还有字体、字重、字号、宽度、高度、双方头像。
 - **省 token**：默认关掉配图清单、记忆轮数降到 2；寒暄类短句走本地规则表（0 token），只有真问题才发给模型。
 - **长按小女仆可拖动窗口**，面板跟窗一起走，相对位置不乱。
+## 宣传图
+
+![宠物聊天 dsh-pet-chat：给小女仆装一个 QQ 级聊天面板](docs/promo/01-hero.png)
+
+![原版 vs 加强版：多出来的能力对照](docs/promo/02-compare.png)
+
+其余几张（分支对话、停靠与缩放、安装说明）在 [docs/promo](docs/promo) 目录，1600×1000，由 `docs/promo/make-promo.py` 生成。
 
 ## 长什么样
 
